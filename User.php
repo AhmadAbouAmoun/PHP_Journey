@@ -18,6 +18,18 @@ class user{
             return false;
         }
     }
+    public function validate_email(){
+        if(filter_var($this->email,FILTER_VALIDATE_EMAIL)){
+            echo"right email format ";
+            return true;
+        }
+        else{
+            echo"wrong email format ";
+            return true;
+        }
+
+    }
 } 
-$user=new user("ahmad","AaAa#awfqewgeg");
+$user=new user("ahmad@gmail.com","AaAa#awfqewgeg");
 $user->check_password();
+$user->validate_email();
