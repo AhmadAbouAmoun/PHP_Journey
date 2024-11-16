@@ -31,7 +31,7 @@ class LinkedList{
             $current->next=$node;
         }
     }
-    public function display_2_Voweled_nodes(){
+    public function display_Voweled_nodes(){
         if($this->head===null){
             echo"list is empty";
             return;
@@ -51,4 +51,4 @@ $list->appendLL("hello");
 $list->appendLL("sky");
 $list->appendLL("area");
 $list->appendLL("yes");
-$list->display_2_Voweled_nodes();
+$list->display_Voweled_nodes();
