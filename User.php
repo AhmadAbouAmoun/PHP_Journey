@@ -29,7 +29,13 @@ class user{
         }
 
     }
+    public function copy_with($email=null,$password=null){
+        return new self($email??$this->email,
+        $password??$this->password);
+    }
 } 
 $user=new user("ahmad@gmail.com","AaAa#awfqewgeg");
+$new= $user->copy_with(email:"ah@gmail.com");
+echo json_encode($new);
 $user->check_password();
 $user->validate_email();
